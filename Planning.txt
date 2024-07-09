@@ -27,6 +27,8 @@ Frontend :
             1.Header
             2.Footer
             3.advertisement and services page cards
+            4.Home page carsoul
+            5.Home page Slider
         
     ## Website routes
 
