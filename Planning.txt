@@ -1,0 +1,90 @@
+                              
+                               || श्री ||
+
+Project name : Lambodar Debt's solution, CSN
+
+## What?
+we are suppose to make advertisement website, having(home,about us,services,carrer,contact us);
+
+=========================================================================
+
+Frontend :
+
+   Tech Stack : Reactjs,css,jsx;
+
+    ## website identification
+
+      # Major comoponents
+
+         1. Home Page
+         2. About us Page
+         3. services Page
+         4. carrer Page
+         5. contact us Page
+
+      # Minor comoponents
+
+            1.Header
+            2.Footer
+            3.advertisement and services page cards
+        
+    ## Website routes
+
+    (All are individual routes)
+        1. '/home' --> home page
+        2. '/about' --> about us page
+        3. '/services' --> services Page
+        4. '/carrer'   ---> carrer Page
+        5. '/contact'   ---> contact Page
+
+         
+==========================================================================
+
+Backend :
+
+       Tech Stack :node,express,otp verification(email,mobile),mongodb;
+
+       ## routes
+
+            1.'carrer/submit'  ---> store it's data to Backend/db
+
+
+       ## database fields (mongodb)
+
+            {
+                "Name":{
+                    type:String,
+                    required:true
+                },
+                "email":{
+                    type:String,
+                },
+                "mobile":{
+                    type:String,
+                    required:true
+                },
+                "job": {
+                    type:String,
+                    enum[..jobprofiles]   ----> Will set as soon as we come to know,
+                    required:true
+                }                 
+            }
+
+
+## Development Cycle:
+
+$ Within <-----three days----/> of orientation all Minor comoponents should be prepared with responsivness
+
+$ After that I will set routes and update the file structure also we will build our pages in "pages" directory of our project
+
+
+
+=======================================================================
+
+## Important instructions for styling the comoponents 
+ 
+     1. Do not directly style the elements.
+     2. Define classname or id name uniquely  
+     (example : <file-name>-<component>-<component-Type>)  or anything suitable for you but remember that it should not affect the other file comoponents. 
+
+## At the production level above things will matter very much.
