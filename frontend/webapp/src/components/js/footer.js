@@ -3,6 +3,8 @@ import call from '../../assets/Call.png'
 import gmail from '../../assets/Gmail.png'
 import loc from '../../assets/Location.png'
 import '../css/footer.css'
+import {Link} from 'react-router-dom';
+
 export default function Footer() {
   return (
     <>
@@ -16,17 +18,17 @@ export default function Footer() {
                 </div>
                 <br/>
                 <div>
-                    <img src={gmail} alt=' '></img><span>    Ganesh.mansurkar@moryaassociates.com</span>
+                    <img src={gmail} alt=' '></img><span>  Ganesh.mansurkar@moryaassociates.com</span>
                 </div>
             </div>
             <div className='footer-content-quicklinks'>
                 <h4>Quick Links</h4>
                 <div>
                     <ul>
-                        <li><a href='w.com'>Home</a></li>
-                        <li><a href='w.com'>About Us</a></li>
-                        <li><a href='w.com'>Services</a></li>
-                        <li><a href='w.com'>Carriers</a></li>
+                        <li><Link to='/home'>Home</Link></li>
+                        <li><Link to='/about'>About Us</Link></li>
+                        <li><Link to='/services'>Services</Link></li>
+                        <li><Link to='carrer'>Carriers</Link></li>
                     </ul>
                 </div>
             </div>
