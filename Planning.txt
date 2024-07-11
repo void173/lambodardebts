@@ -25,7 +25,7 @@ Frontend :
       # Minor comoponents
 
             1.Header
-            2.Footer
+            2.Footer (done)
             3.advertisement and services page cards
             4.Home page carsoul
             5.Home page Slider

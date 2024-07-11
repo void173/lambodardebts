@@ -7,6 +7,8 @@ import {
 import Home from '../../webapp/src/pages/js/Home';
 import About from '../../webapp/src/pages/js/About'
 import Contact from './pages/js/Contact';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (

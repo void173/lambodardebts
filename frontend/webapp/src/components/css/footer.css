@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 20px 0px 20px;
+    /* padding: 20px 20px 0px 20px; */
 }
 
 .footer-content{
@@ -18,6 +18,8 @@
     justify-items: center;
     justify-content: space-around;
     width: 100%;
+    /* padding: 20px 20px 20px 20px; */
+    margin-right: 35px;
 }
 
 .footer-content-contact{
@@ -81,6 +83,7 @@
         flex-direction: column;
         justify-items: center;
         align-items: center;
+        margin: 0%;
     }
 
     .footer-content-contact h4{
