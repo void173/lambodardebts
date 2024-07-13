@@ -4,12 +4,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 96px;
   }
   
   .navbar-custom .navbar-brand img {
     width: 177px;
     height: 68px;
-    margin-left: 20px; /* Margin on the left side of the logo */
+    margin-left: 20px; 
   }
   
   .navbar-custom .navbar-nav {
