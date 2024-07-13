@@ -22,6 +22,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/carrier' element={<Carrier/>}></Route>
       </Routes>
+      <br/>
       <Footer/>
     </Router>
   );
