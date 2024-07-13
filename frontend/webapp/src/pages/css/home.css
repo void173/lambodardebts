@@ -26,3 +26,16 @@
     margin: 0; /* Remove default margin */
   }
   
+  .head-office-content-custom{
+    display: flex !important; 
+    justify-content: space-around !important;
+  }
+
+  .head-office-content{
+    font-family: 'poppins',sans-serif;
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px){
+
+  }
