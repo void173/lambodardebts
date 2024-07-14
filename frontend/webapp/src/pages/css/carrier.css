@@ -1,75 +1,131 @@
 .styled-div {
-  width: 100%; /* Adjusted for responsiveness */
-  max-width: 1301px; /* Keep a maximum width for larger screens */
-  height: 374px; 
+  width: 100%;
+  max-width: 1301px;
+  height: 374px;
   border-radius: 43px;
   background: #2C374E;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin: 0 auto; /* Center the div horizontally */
-  padding: 20px; /* Added padding for spacing */
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .styled-div h2 {
   color: white;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-size: 3rem; /* Adjusted for responsiveness */
-
-  margin: 20px 0; /* Added margin for spacing */
+  font-size: 3rem;
+  margin: 20px 0;
 }
 
 .styled-div h4 {
-  font-size: 2rem; /* Adjusted for responsiveness */
+  font-size: 2rem;
   color: #FF772B;
- 
-  margin-bottom: 20px; /* Added margin for spacing */
+  margin-bottom: 20px;
 }
 
 .InterviewImage {
   display: block;
-  margin-left:  auto; 
-  max-width: 100%; 
+  margin-left: auto;
+  max-width: 100%;
   margin-top: -100px;
-  height: auto; /* Maintain aspect ratio */
-  max-height: 339px; /* Adjusted for responsiveness */
+  height: auto;
+  max-height: 339px;
 }
 
 .second-section-carrier-page {
   text-align: center;
-  padding: 20px; /* Added padding for spacing */
+  padding: 20px;
 }
 
 .info-para-carrier {
-  width: 100%; /* Adjusted for responsiveness */
-  max-width: 400px; /* Adjusted for responsiveness */
-  margin: 0 auto; /* Center the paragraph */
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
   text-align: center;
 }
 
 @media (max-width: 768px) {
   .styled-div h2 {
-    font-size: 2.5rem; /* Adjusted for smaller screens */
+    font-size: 2.5rem;
   }
-  
+
   .styled-div h4 {
-    font-size: 1.8rem; /* Adjusted for smaller screens */
+    font-size: 1.8rem;
   }
 
   .InterviewImage {
-    max-width: 80%; /* Adjusted for smaller screens */
-    max-height: 280px; /* Adjusted for smaller screens */
+    max-width: 80%;
+    max-height: 280px;
   }
 }
 
 @media (max-width: 576px) {
   .styled-div h2 {
-    font-size: 2rem; /* Further adjustment for smaller screens */
+    font-size: 2rem;
   }
-  
+
   .styled-div h4 {
-    font-size: 1.5rem; /* Further adjustment for smaller screens */
+    font-size: 1.5rem;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center cards vertically */
+}
+
+.cards-row {
+  display: flex;
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Adjust the gap between cards */
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+
+
+.cards-row > div {
+  width: calc(50% - 10px); /* Set width for each card (two cards per row with gap) */
+  max-width: 405px; /* Limit max-width of each card */
+  flex: 1 1 auto; /* Allow cards to grow and shrink */
+  
+
+}
+
+@media (max-width: 768px) {
+  .cards-row > div {
+    width: calc(100% - 40px); /* Full width for cards on smaller screens */
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center cards vertically */
+}
+
+.cards-row {
+  display: flex;
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Adjust the gap between cards */
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+
+
+.cards-row > div {
+  width: calc(50% - 10px); /* Set width for each card (two cards per row with gap) */
+  max-width: 405px; /* Limit max-width of each card */
+  flex: 1 1 auto; /* Allow cards to grow and shrink */
+  
+
+}
+
+@media (max-width: 768px) {
+  .cards-row > div {
+    width: calc(100% - 40px); /* Full width for cards on smaller screens */
   }
 }
