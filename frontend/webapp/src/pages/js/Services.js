@@ -1,5 +1,5 @@
 import React from 'react';
-import JobImage from '../../assets/Mangetsajob.png';
+import img1 from '../../assets/online-business.png'
 import Cards from '../../components/js/Card'; // Import your Card component here
 import '../css/services.css'
 const abstyle = {
@@ -9,15 +9,16 @@ const abstyle = {
 const Services = () => {
   return (
     <section>
-      <h3 style={abstyle}>Services</h3>
+      <h3 id='page-heading' style={abstyle}>Services</h3>
       
       <div className='first-section'>
         <div className='first-section-left'>
           <h4>Affordable services provided by us.</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.</p>
+          <span id='btn'><button >Explore</button></span>
         </div>
         <div className='first-section-right'>
-          <img src="" alt="online business photo"></img>
+          <img src={img1} alt="online business"></img>
         </div>
         
       </div>

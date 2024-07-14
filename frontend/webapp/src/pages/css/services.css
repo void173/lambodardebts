@@ -1,8 +1,46 @@
+#page-heading{
+    padding: 30px;
+    font-size: 40px;
+    font-family: poppins,sans-serif;
+}
 .first-section{
     display: flex;
     padding: 30px 50px;
+    align-items: center;
 }
 .first-section-left{
     width: 50%;
-    
+    font-family: Poppins,sans-serif;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.first-section-left h4{
+    font-weight: 700;
+    font-size: 60px;
+}
+.first-section-left p{
+    font-size: 18px;
+    font-weight: 400;
+}
+#btn{
+    padding: 10px;
+}
+.first-section-left button{
+    background: rgba(255, 119, 43, 1);
+    color: white;
+    width: 196px;
+    height: 52px;
+    border-radius: 10px;
+}
+.first-section-right{
+    padding: 10px;
+}
+.first-section-right img{
+    width: 100%;
+    max-width: 576px;
+}
+.second-section-carrier-page h3{
+    font-weight: 700;
+    font-size: 40px;
 }
