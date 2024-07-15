@@ -9,7 +9,7 @@ import loksuvidha from '../../assets/loksuvidha.png'
 
 function IndividualIntervalsExample() {
   return (
-    <Carousel>
+    <Carousel data-aos='fade-in'>
       <Carousel.Item interval={1500}>
         <img
           className="d-block w-100"
