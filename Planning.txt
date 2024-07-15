@@ -90,3 +90,10 @@ $ After that I will set routes and update the file structure also we will build 
      (example : <file-name>-<component>-<component-Type>)  or anything suitable for you but remember that it should not affect the other file comoponents. 
 
 ## At the production level above things will matter very much.
+
+
+// 5 - Days left 
+
+3->dev 
+1 day resolution
+content loading
