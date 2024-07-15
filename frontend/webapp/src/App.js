@@ -9,6 +9,7 @@ import Home from '../../webapp/src/pages/js/Home';
 import About from '../../webapp/src/pages/js/About'
 import Contact from './pages/js/Contact';
 import Carrier from './pages/js/Carrier';
+import Services from './pages/js/Services';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -20,8 +21,10 @@ function App() {
         <Route path='/home' element={<Home/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
-        <Route path='/carrier' element={<Carrier/>}></Route>
+        <Route path='/career' element={<Carrier/>}></Route>
+        <Route path='/services' element={<Services/>}></Route>
       </Routes>
+      <br/>
       <Footer/>
     </Router>
   );

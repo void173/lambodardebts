@@ -1,104 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.footer-main{
-    background-color: #2C374E;
-    font-family: Poppins;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* padding: 20px 20px 0px 20px; */
+.footer-main {
+  background-color: #2C374E;
+  font-family: Poppins;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  width: 100%;
 }
 
-.footer-content{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    gap: 10px; 
-    justify-items: center;
-    justify-content: space-around;
-    width: 100%;
-    /* padding: 20px 20px 20px 20px; */
-    margin-right: 35px;
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  width: 100%;
+  padding: 0 20px;
 }
 
-.footer-content-contact{
-    display: flex;
-    flex-direction: column;
+.footer-content-contact,
+.footer-content-quicklinks,
+.footer-content-ourLocation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.footer-content-contact img{
-    transform: translateY(5px);
+.footer-content-contact img,
+.footer-content-ourLocation img {
+  transform: translateY(-2px);
 }
 
-.footer-content-quicklinks{
-    display: flex;
-    flex-direction: column;
-}
-.footer-content-quicklinks a{
-    color: white;
-    text-decoration: none;
+.footer-content-quicklinks a {
+  color: white;
+  text-decoration: none;
 }
 
 .footer-content-quicklinks ul {
-    list-style-type: none; /* Remove default bullets if desired */
-    padding: 0; /* Remove default padding */
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
 }
 
 .footer-content-quicklinks li {
-    margin-bottom: 10px; /* Adjust the value to increase/decrease the gap */
+  margin-bottom: 10px;
 }
 
-.footer-content-quicklinks li:last-child {
-    margin-bottom: 0; /* Optional: Remove margin from the last item */
+.footer-content-ourLocation a {
+  color: white;
+  text-decoration: none;
 }
 
-.footer-content-ourLocation{
-    display: flex;
-    flex-direction: column;
-}
-.footer-content-ourLocation a{
-    color: white;
-    text-decoration: none;
-}
-
-.footer-content-ourLocation img{
-    transform: translateY(5px);
-}
-
-
-.footer-copyright{
-    background: linear-gradient(0deg, rgb(103, 114, 133) 0%, rgba(44, 55, 78, 1) 100%);
-    width: 100%;
-    text-align: center;
+.footer-copyright {
+  background: linear-gradient(0deg, rgb(103, 114, 133) 0%, rgba(44, 55, 78, 1) 100%);
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
-    .footer-main{
-        width: 100%;
-    }
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        margin: 0%;
-    }
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .footer-content-contact h4{
-        text-align: center;
-    }
+  .footer-content-contact,
+  .footer-content-quicklinks,
+  .footer-content-ourLocation {
+    align-items: center;
+  }
 
-    .footer-content-quicklinks ul {
-        text-align: center;
-    }
-
-    .footer-content-ourLocation h4{
-        text-align: center;
-    }
-    .footer-content-ourLocation div{
-        width: 400px;
-        text-align: center;
-    }
+  .footer-content-quicklinks ul {
+    text-align: center;
+  }
 }
