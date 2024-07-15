@@ -1,6 +1,8 @@
 import React from 'react';
 import img1 from '../../assets/online-business.png'
-import Cards from '../../components/js/Card'; // Import your Card component here
+import Cards from '../../components/js/Card' 
+import { Container } from 'react-bootstrap';
+// Import your Card component here
 import '../css/services.css'
 const abstyle = {
   textAlign: 'center'
@@ -8,6 +10,7 @@ const abstyle = {
 
 const Services = () => {
   return (
+    <Container>
     <section>
       <h3 id='page-heading' style={abstyle}>Services</h3>
       
@@ -18,7 +21,7 @@ const Services = () => {
           <span id='btn'><button >Explore</button></span>
         </div>
         <div className='first-section-right'>
-          <img src={img1} alt="online business"></img>
+          <img src={img1} alt="online business" className='img-fluid'></img>
         </div>
         
       </div>
@@ -31,6 +34,7 @@ const Services = () => {
       </div>
 
       {/* Cards Section */}
+      <Container>
       <div className="cards-container">
         <div className="cards-row">
           <Cards />
@@ -45,7 +49,9 @@ const Services = () => {
           <Cards />
         </div>
       </div>
+      </Container>
     </section>
+    </Container>
   );
 };
 
