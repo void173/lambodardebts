@@ -9,5 +9,18 @@
   }
 
   @media (max-width: 768px){
+    .headoffice-custom{
+      font-size: 15px;
+    }
 
+    .home-hero-overlay{
+      font-size: 12px !important;
+    }
+
+    .home-hero-button{
+      padding: 6px 20px !important; 
+    }
   }
+
+
+  

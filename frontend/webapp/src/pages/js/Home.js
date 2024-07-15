@@ -4,8 +4,19 @@ import woman from '../../assets/homepagewoman.png';
 import loc from '../../assets/loc.png';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../css/home.css';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Global duration for all animations
+      once: false, // Whether animation should happen only once - while scrolling down
+      mirror: false, // Whether elements should animate out while scrolling past them
+    });
+  }, []);
+
   const imageStyle = {
     width: "100%",
     boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
@@ -58,12 +69,12 @@ export default function Home() {
     <>
       <div className='home-main-custom'>
         <Container>
-          <div className='home-hero-custom' style={containerStyle}>
+          <div className='home-hero-custom' style={containerStyle}  data-aos="fade-up" data-aos-easing="cubic-bezier(0.68, -0.55, 0.27, 1.55)">
             <img style={imageStyle} src={woman} alt='woman' className="img-fluid" />
             <div style={overlayStyle}>
               <div style={overlayContent} className='home-hero-overlay'>
-                <h1 style={{ fontSize: "4.1vw", fontWeight: "30px", fontFamily: "Poppins" }}>WE BRING GOOD FINANCIAL TO LIFE.</h1>
-                <div>
+                <h1 style={{ fontSize: "4.1vw", fontWeight: "30px", fontFamily: "Poppins" }} data-aos='fade-left'>WE BRING GOOD FINANCIAL TO LIFE.</h1>
+                <div data-aos='fade-right'>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi nemo corporis quod distinctio veniam fugit cumque cum,
                   <div style={buttonparentStyle}>
                     <button style={buttonStyle} className='home-hero-button'>Explore</button>
@@ -76,7 +87,7 @@ export default function Home() {
           <br />
           <br />
           <div className='home-carousel-custom'>
-            <h3 className='text-center'>Banks Associated with us.</h3>
+            <h3 className='text-center' data-aos='fade-right'>Banks Associated with us.</h3>
             <IndividualIntervalsExample />
           </div>
           <br />
@@ -88,7 +99,7 @@ export default function Home() {
             <br />
             <Container>
               <Row className='head-office-content-custom'>
-                <Col md={6} className='head-office-content'>
+                <Col md={6} className='head-office-content' data-aos='fade-right'>
                   <div>
                     <h4>Address</h4>
                     <br/>
@@ -102,7 +113,7 @@ export default function Home() {
                     <p>Email : Lambodar@debts</p>
                   </div>
                 </Col>
-                <Col md={6} className='head-office-loc'>
+                <Col md={6} className='head-office-loc' data-aos='fade-left'>
                   <img src={loc} alt='' className='img-fluid' />
                 </Col>
               </Row>
