@@ -82,3 +82,20 @@
     text-align: center;
   }
 }
+
+@media (max-width: 375px){
+  .footer-content-contact{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer-content-contact div{
+    display: flex;
+    justify-content: space-around;
+    word-wrap: break-word;
+  }
+
+  .footer-main{
+    font-size: 15px;
+  }
+}

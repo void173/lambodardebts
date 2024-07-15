@@ -9,16 +9,17 @@ export default function Footer() {
   return (
     <>
       <div className='footer-main'>
+        
         <div className='footer-content'>
           <div className='footer-content-contact'>
             <h4>Contact Us</h4>
             <br/>
             <div>
-              <img src={call} alt=' ' /><span> 919860485555 , 0240-2980505 Ganesh</span>
+              <img src={call} alt=' ' /><div> 919860485555 , 0240-2980505 Ganesh</div>
             </div>
             <br/>
             <div>
-              <img src={gmail} alt=' ' /><span> Ganesh.mansurkar@moryaassociates.com</span>
+              <img src={gmail} alt=' ' /><div> Ganesh.mansurkar@moryaassociates.com</div>
             </div>
             <br />
           </div>
@@ -38,11 +39,11 @@ export default function Footer() {
             <h4>Our Locations</h4>
             <br/>
             <div>
-              <img src={loc} alt='' /><span><a href='w.com'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur </a></span>
+              <img src={loc} alt='' /><div><a href='w.com'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur </a></div>
             </div>
             <br/>
             <div>
-              <img src={loc} alt='' /><span><a href='w.com'> Lorem ipsum dolor sit amet consectetur adipisicing elit.t ing elit. Lorem ipsum dolor sit amet consectetur</a></span>
+              <img src={loc} alt='' /><div><a href='w.com'> Lorem ipsum dolor sit amet consectetur adipisicing elit.t ing elit. Lorem ipsum dolor sit amet consectetur</a></div>
             </div>
           </div>
         </div>
