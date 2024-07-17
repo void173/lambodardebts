@@ -1,7 +1,8 @@
 import React from 'react'
-import { Container } from 'react-bootstrap';
+// import { Container } from 'react-bootstrap';
 import abimg1 from '../../assets/team.jpeg';
 import abimg2 from '../../assets/girl.png'
+import Card_count from '../../components/js/count-card';
 import '../css/about.css'
 const abstyle = {
     textAlign:'center'
@@ -9,7 +10,7 @@ const abstyle = {
 export default function About() {
   return (
     <>
-    <Container>
+    <div className='cont'>
     <h3 id='page-heading' style={abstyle}>About Us</h3>
     <div className='section-top'>
       <img src={abimg1} alt='#'></img>
@@ -43,9 +44,13 @@ export default function About() {
         </div>
     </div>
     <div className='section-bottom'>
-      Cards will come here
+      <div className='card-cont'>
+        <Card_count count='100' title="Projects" info="this is the no of projects we completed this year" />
+        <Card_count count='100' title="Projects" info="this is the no of projects we completed this year" />
+        <Card_count count='100' title="Projects" info="this is the no of projects we completed this year" />
+      </div>
     </div>
-    </Container>
+    </div>
     </>
   )
 }
