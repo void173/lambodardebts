@@ -3,7 +3,7 @@ import React from 'react'
 import abimg1 from '../../assets/team.jpeg';
 import abimg2 from '../../assets/girl.png'
 import Card_count from '../../components/js/count-card';
-import '../css/about.css'
+import '../css/about.css';
 const abstyle = {
     textAlign:'center'
 };
@@ -45,7 +45,7 @@ export default function About() {
     </div>
     <div className='section-bottom'>
       <div className='card-cont'>
-        <Card_count count='100' title="Projects" info="this is the no of projects we completed this year" />
+        <Card_count count='1000' title="Projects" info="this is the no of projects we completed this year" />
         <Card_count count='100' title="Projects" info="this is the no of projects we completed this year" />
         <Card_count count='100' title="Projects" info="this is the no of projects we completed this year" />
       </div>
