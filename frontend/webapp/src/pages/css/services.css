@@ -5,8 +5,9 @@
 }
 .first-section{
     display: flex;
-    padding: 30px 50px;
+    padding: 30px 30px;
     align-items: center;
+    justify-content: center;
 }
 .first-section-left{
     width: 50%;
@@ -25,13 +26,15 @@
 }
 #btn{
     padding: 10px;
+    margin: auto;
+    width: 50%;
 }
 .first-section-left button{
     background: rgba(255, 119, 43, 1);
     color: white;
-    width: 196px;
-    height: 52px;
-    border-radius: 10px;
+    padding: 10px 60px;
+    border-radius: 8px;
+    border: none;
 }
 .first-section-right{
     padding: 10px;
@@ -43,4 +46,40 @@
 .second-section-carrier-page h3{
     font-weight: 700;
     font-size: 40px;
+}
+@media (max-width : 992px) {
+    .first-section-left h4{
+        font-size: 45px;
+    }
+    .first-section-left p{
+        font-size: 14px;
+    }
+}
+@media (max-width : 768px) {
+    .first-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-section-left{
+        width: 100%;
+    }
+    .cards-row{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width : 441px) {
+    .first-section-left h4,.second-section-carrier-page h3{
+        font-size: 30px;
+    }
+    .first-section-left p,.info-para-carrier p{
+        font-size: 12px;
+    }
+    #page-heading{
+        font-size: 30px;
+    }
+    .first-section-left button{
+        padding: 7px 40px;
+        justify-self: center;
+    }
 }
