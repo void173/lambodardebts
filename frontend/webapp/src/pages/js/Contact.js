@@ -1,7 +1,7 @@
 import React from 'react';
-import Col from 'react-bootstrap/Col';
+
 import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
+
 import Button from 'react-bootstrap/Button'; 
 import contactImage from '../../assets/contactUs.png'; 
 import '../css/contact.css';
@@ -13,7 +13,7 @@ function Contact() {
     <section>
     <div className="hero_container">
     <div className="left-container">
-      <div className="text-container"> {/* New container for the paragraph */}
+      <div className="text-container"> 
         <h2>Get in touch</h2>
         <p>Visit our agency or simply send us an email anytime you want. If you have any questions, please feel free to contact us.</p>
       </div>

@@ -72,6 +72,7 @@
   }
 }
 
+/* Cards Container and Rows */
 .cards-container {
   display: flex;
   flex-direction: column;
@@ -85,14 +86,10 @@
   margin-bottom: 20px; /* Add bottom margin for spacing */
 }
 
-
-
 .cards-row > div {
   width: calc(50% - 10px); /* Set width for each card (two cards per row with gap) */
   max-width: 405px; /* Limit max-width of each card */
   flex: 1 1 auto; /* Allow cards to grow and shrink */
-  
-
 }
 
 @media (max-width: 768px) {
@@ -101,34 +98,24 @@
   }
 }
 
-.cards-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center cards vertically */
-}
-
-.cards-row {
-  display: flex;
-  justify-content: center; /* Center cards horizontally */
-  gap: 20px; /* Adjust the gap between cards */
-  margin-bottom: 20px; /* Add bottom margin for spacing */
-}
-
-
-
-.cards-row > div {
-  width: calc(50% - 10px); /* Set width for each card (two cards per row with gap) */
-  max-width: 405px; /* Limit max-width of each card */
-  flex: 1 1 auto; /* Allow cards to grow and shrink */
-  
-
-}
-
-@media (max-width: 768px) {
-  .cards-row > div {
-    width: calc(100% - 40px); /* Full width for cards on smaller screens */
-  }
-}
-.button-apply{
+/* Button Styles */
+.button-apply {
   width: 200px;
+}
+
+/* Additional Media Queries */
+@media (max-width: 992px) {
+  .styled-div h2 {
+    font-size: 2.8rem; /* Adjust h2 font size for medium screens */
+  }
+}
+
+@media (max-width: 441px) {
+  .styled-div h2 {
+    font-size: 2.5rem; /* Adjust h2 font size for smaller screens */
+  }
+  
+  .styled-div h4 {
+    font-size: 1.2rem; /* Adjust h4 font size for smaller screens */
+  }
 }
