@@ -27,10 +27,10 @@
 }
 
 .InterviewImage {
-  display: block;
+  display: flex;
   margin-left: auto;
   max-width: 100%;
-  margin-top: -100px;
+  margin-top: -120px;
   height: auto;
   max-height: 339px;
 }
@@ -128,4 +128,7 @@
   .cards-row > div {
     width: calc(100% - 40px); /* Full width for cards on smaller screens */
   }
+}
+.button-apply{
+  width: 200px;
 }

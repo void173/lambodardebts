@@ -11,7 +11,7 @@ import emailImage from '../../assets/Email.png'
 function Contact() {
   return (
     <section>
-    <div className="container">
+    <div className="hero_container">
     <div className="left-container">
       <div className="text-container"> {/* New container for the paragraph */}
         <h2>Get in touch</h2>
