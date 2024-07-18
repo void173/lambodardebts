@@ -27,10 +27,10 @@
 }
 
 .InterviewImage {
-  display: block;
+  display: flex;
   margin-left: auto;
   max-width: 100%;
-  margin-top: -100px;
+  margin-top: -120px;
   height: auto;
   max-height: 339px;
 }
@@ -75,57 +75,71 @@
 .cards-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center cards vertically */
+  align-items: center; 
 }
 
 .cards-row {
   display: flex;
-  justify-content: center; /* Center cards horizontally */
-  gap: 20px; /* Adjust the gap between cards */
-  margin-bottom: 20px; /* Add bottom margin for spacing */
+  justify-content: center;
+  gap: 20px; 
+  margin-bottom: 20px; 
 }
 
-
-
 .cards-row > div {
-  width: calc(50% - 10px); /* Set width for each card (two cards per row with gap) */
-  max-width: 405px; /* Limit max-width of each card */
-  flex: 1 1 auto; /* Allow cards to grow and shrink */
-  
-
+  width: calc(50% - 10px); 
+  max-width: 405px; 
+  flex: 1 1 auto; 
 }
 
 @media (max-width: 768px) {
   .cards-row > div {
-    width: calc(100% - 40px); /* Full width for cards on smaller screens */
+    width: calc(100% - 40px); 
   }
 }
 
-.cards-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center cards vertically */
-}
-
-.cards-row {
-  display: flex;
-  justify-content: center; /* Center cards horizontally */
-  gap: 20px; /* Adjust the gap between cards */
-  margin-bottom: 20px; /* Add bottom margin for spacing */
+.button-apply {
+  width: 200px;
 }
 
 
+@media (max-width: 992px) {
+  .styled-div h2 {
+    font-size: 2.8rem; 
+  }
+}
 
-.cards-row > div {
-  width: calc(50% - 10px); /* Set width for each card (two cards per row with gap) */
-  max-width: 405px; /* Limit max-width of each card */
-  flex: 1 1 auto; /* Allow cards to grow and shrink */
+@media (max-width: 441px) {
+  .styled-div h2 {
+    font-size: 2.5rem; 
+  }
   
-
-}
-
-@media (max-width: 768px) {
-  .cards-row > div {
-    width: calc(100% - 40px); /* Full width for cards on smaller screens */
+  .styled-div h4 {
+    font-size: 1.2rem; 
   }
 }
+@media (max-width: 600px) {
+  .InterviewImage {
+    margin-top: 20px; 
+    max-height: 200px;
+    margin-left: auto; 
+    margin-right: auto;
+    display: block; 
+  }
+
+  .styled-div {
+    height: 450px; 
+  }
+}
+
+@media (max-width: 400px) {
+  .InterviewImage {
+    margin-top: 40px; 
+    max-height: 160px; 
+  }
+
+  .styled-div {
+    height: 500px; 
+  }
+}
+
+
