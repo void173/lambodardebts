@@ -47,7 +47,8 @@ const StyledDiv = () => {
         <Button className='button-apply' variant="outline-light" onClick={handleShow}>
           Apply now
         </Button>{' '}
-        <img className='InterviewImage' src={interviewImage} alt="Online Interview" data-aos="fade-left" />
+        <img className='InterviewImage
+        ' src={interviewImage} alt="Online Interview" data-aos="fade-left" />
       </div>
 
       <div className='second-section-carrier-page'>
