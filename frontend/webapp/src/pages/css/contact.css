@@ -53,13 +53,15 @@
   }
   .loc-cont{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
-  .loc-cont h4{
+  #lower-head{
     padding: 30px;
-    font-size: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 4.5vw;
     font-family: poppins,sans-serif;
   }
   

@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../../components/css/count-card.css'
 
-function Card_count(props) {
+function CardCount(props) {
     useEffect(() => {
         AOS.init({
           duration: 1000, // Global duration for all animations
@@ -19,4 +19,4 @@ function Card_count(props) {
         </div>
     );
 }
-export default Card_count;
+export default CardCount;
