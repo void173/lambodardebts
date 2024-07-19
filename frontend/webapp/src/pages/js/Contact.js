@@ -1,12 +1,13 @@
 import React from 'react';
-import Col from 'react-bootstrap/Col';
+// import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
+// import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button'; 
 import contactImage from '../../assets/contactUs.png'; 
 import '../css/contact.css';
 import callImage from '../../assets/Call_Contact.png'
 import emailImage from '../../assets/Email.png'
+import L_card from '../../components/js/l-card';
 
 function Contact() {
   return (
@@ -66,6 +67,12 @@ function Contact() {
             Submit
           </Button>
         </Form>
+      </div>
+    </div>
+    <div className='loc-cont'>
+      <h4>Our Locations</h4>
+      <div className='l-card-cont'>
+        <L_card info="this is our new location. it is very butiful. do come." mobno="123-456-7890" />
       </div>
     </div>
     </section>

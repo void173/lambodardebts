@@ -51,4 +51,15 @@
     height: 72px; 
     margin-right: 10px;
   }
+  .loc-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .loc-cont h4{
+    padding: 30px;
+    font-size: 40px;
+    font-family: poppins,sans-serif;
+  }
   
