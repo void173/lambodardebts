@@ -6,6 +6,7 @@ import AOS from 'aos';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import axios from 'axios'; // Import axios
 
 const abstyle = {
   textAlign: 'center'
@@ -15,7 +16,15 @@ const jobRoles = ['Back Office Operation', 'Telecalling', 'Field Executive', 'An
 
 const StyledDiv = () => {
   const [showForm, setShowForm] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState('');
   const [selectedJobRole, setSelectedJobRole] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    jobRole: '',
+    mobile: ''
+  });
 
   useEffect(() => {
     AOS.init({
@@ -28,15 +37,37 @@ const StyledDiv = () => {
   const handleShow = () => setShowForm(true);
   const handleClose = () => setShowForm(false);
 
-  const handleJobRoleChange = (e) => {
-    setSelectedJobRole(e.target.value);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    handleClose(); 
+  const handleJobRoleChange = (e) => {
+    setSelectedJobRole(e.target.value);
+    setFormData({ ...formData, jobRole: e.target.value });
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('/career', formData, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      console.log('Success:', response.data);
+      setPopupMessage('Application submitted successfully!');
+      setShowPopup(true);
+      handleClose();
+    } catch (error) {
+      console.error('Error:', error);
+      setPopupMessage('Failed to submit application. Please try again.');
+      setShowPopup(true);
+    }
+  };
+
+  const handlePopupClose = () => setShowPopup(false);
 
   return (
     <section>
@@ -47,8 +78,7 @@ const StyledDiv = () => {
         <Button className='button-apply' variant="outline-light" onClick={handleShow}>
           Apply now
         </Button>{' '}
-        <img className='InterviewImage
-        ' src={interviewImage} alt="Online Interview" data-aos="fade-left" />
+        <img className='InterviewImage' src={interviewImage} alt="Online Interview" data-aos="fade-left" />
       </div>
 
       <div className='second-section-carrier-page'>
@@ -81,17 +111,17 @@ const StyledDiv = () => {
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="formName">
               <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter your name" />
+              <Form.Control type="text" name="name" placeholder="Enter your name" value={formData.name} onChange={handleInputChange} />
             </Form.Group>
 
             <Form.Group controlId="formEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter your email" />
+              <Form.Control type="email" name="email" placeholder="Enter your email" value={formData.email} onChange={handleInputChange} />
             </Form.Group>
 
             <Form.Group controlId="formJob">
               <Form.Label>Job Role</Form.Label>
-              <Form.Control as="select" value={selectedJobRole} onChange={handleJobRoleChange}>
+              <Form.Control as="select" name="jobRole" value={selectedJobRole} onChange={handleJobRoleChange}>
                 <option value="">Select a job role...</option>
                 {jobRoles.map((role, index) => (
                   <option key={index} value={role}>
@@ -103,7 +133,7 @@ const StyledDiv = () => {
 
             <Form.Group controlId="formMobile">
               <Form.Label>Mobile No.</Form.Label>
-              <Form.Control type="tel" placeholder="Enter your mobile number" />
+              <Form.Control type="tel" name="mobile" placeholder="Enter your mobile number" value={formData.mobile} onChange={handleInputChange} />
             </Form.Group>
             
             <Button variant="primary" type="submit">
@@ -111,6 +141,20 @@ const StyledDiv = () => {
             </Button>
           </Form>
         </Modal.Body>
+      </Modal>
+
+      <Modal show={showPopup} onHide={handlePopupClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Application Status</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>{popupMessage}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handlePopupClose}>
+            Close
+          </Button>
+        </Modal.Footer>
       </Modal>
     </section>
   );
