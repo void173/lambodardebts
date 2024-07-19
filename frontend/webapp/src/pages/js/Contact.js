@@ -4,9 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
 import contactImage from '../../assets/contactUs.png'; 
-import '../css/contact.css';
 import callImage from '../../assets/Call_Contact.png';
 import emailImage from '../../assets/Email.png';
+import '../css/contact.css';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -49,22 +49,24 @@ function Contact() {
 
   return (
     <section>
-      <div className="hero-container">
-        <div className="left-container">
-          <div className="text-container">
-            <h2>Get in touch</h2>
-            <p>Visit our agency or simply send us an email anytime you want. If you have any questions, please feel free to contact us.</p>
-          </div>
-        </div>
-        <div className="right-container">
-          <div className="contact-info">
-            <div className="contact-item">
-              <img src={callImage} alt="Call" />
-              <p>9322944343 / 7058417001</p>
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-md-7">
+            <div className="text-container">
+              <h2 style={{ marginBottom: '15px' }}>Get in touch</h2>
+              <p>Visit our agency or simply send us an email anytime you want. If you have any questions, please feel free to contact us.</p>
             </div>
-            <div className="contact-item">
-              <img src={emailImage} alt="Email" />
-              <p>lambodardebtsolution@gmail.com</p>
+          </div>
+          <div className="col-md-5">
+            <div className="contact-info d-flex justify-content-md-end">
+              <div className="contact-item">
+                <img src={callImage} alt="Call" />
+                <p style={{ marginBottom: '0' }}>9322944343 / 7058417001</p>
+              </div>
+              <div className="contact-item ml-md-4">
+                <img src={emailImage} alt="Email" />
+                <p style={{ marginBottom: '0' }}>lambodardebtsolution@gmail.com</p>
+              </div>
             </div>
           </div>
         </div>
@@ -76,7 +78,8 @@ function Contact() {
           backgroundImage: `url(${contactImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          minHeight: '100vh', 
+          minWidth: '100vw', 
+
           display: 'flex',
           alignItems: 'center',
           padding: '50px'
@@ -133,7 +136,7 @@ function Contact() {
         </div>
       </div>
 
-      <Modal show={showPopup} onHide={handlePopupClose}>
+      <Modal show={showPopup} onHide={handlePopupClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>Contact Form Status</Modal.Title>
         </Modal.Header>
