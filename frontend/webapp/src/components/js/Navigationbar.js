@@ -1,5 +1,6 @@
 // Navigationbar.js (or whatever your component name is)
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../../assets/Logo.png';
@@ -20,11 +21,11 @@ function Navigationbar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav>
-          <Nav.Link href="/home">Home</Nav.Link>
-          <Nav.Link href="/about">About Us</Nav.Link>
-          <Nav.Link href="/services">Services</Nav.Link>
-          <Nav.Link href="/career">Career</Nav.Link>
-          <Nav.Link href="/contact">Contact Us</Nav.Link>
+          <Nav.Link  as={Link} to="/home">Home</Nav.Link>
+          <Nav.Link  as={Link} to="/about">About Us</Nav.Link>
+          <Nav.Link  as={Link} to="/services">Services</Nav.Link>
+          <Nav.Link  as={Link} to="/career">Career</Nav.Link>
+          <Nav.Link  as={Link} to="/contact">Contact Us</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
