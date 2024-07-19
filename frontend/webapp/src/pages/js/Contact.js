@@ -1,7 +1,7 @@
-import React from 'react';
-import Col from 'react-bootstrap/Col';
+import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button'; 
+import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
 import contactImage from '../../assets/contactUs.png'; 
 import '../css/contact.css';
@@ -11,10 +11,13 @@ import emailImage from '../../assets/Email.png';
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
+    mobile: '',
     email: '',
     message: ''
   });
+
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,41 +32,43 @@ function Contact() {
     try {
       const response = await axios.post('/contact', formData);
       if (response.status === 200) {
-        alert('Contact details saved and email sent');
+        setPopupMessage('Contact details saved and email sent');
+        setShowPopup(true);
       } else {
-        alert('Failed to send contact details');
+        setPopupMessage('Failed to send contact details');
+        setShowPopup(true);
       }
     } catch (err) {
       console.error('Error sending contact form data', err);
-      alert('Error sending contact form data');
+      setPopupMessage('Error sending contact form data');
+      setShowPopup(true);
     }
   };
 
+  const handlePopupClose = () => setShowPopup(false);
+
   return (
     <section>
-    <div className="container">
-    <div className="left-container">
-      <div className="text-container"> {/* New container for the paragraph */}
-        <h2>Get in touch</h2>
-        <p>Visit our agency or simply send us an email anytime you want. If you have any questions, please feel free to contact us.</p>
-      </div>
-    </div>
-    <div className="right-container">
-      <div className="contact-info">
-        <div className="contact-item">
-          <img src={callImage} alt="Call" />
-          <p>9322944343 / 7058417001
-          </p>
+      <div className="hero-container">
+        <div className="left-container">
+          <div className="text-container">
+            <h2>Get in touch</h2>
+            <p>Visit our agency or simply send us an email anytime you want. If you have any questions, please feel free to contact us.</p>
+          </div>
         </div>
-        <div className="contact-item">
-          <img src={emailImage} alt="Email" />
-          <p>lambodardebtsolution@gmail.com</p>
+        <div className="right-container">
+          <div className="contact-info">
+            <div className="contact-item">
+              <img src={callImage} alt="Call" />
+              <p>9322944343 / 7058417001</p>
+            </div>
+            <div className="contact-item">
+              <img src={emailImage} alt="Email" />
+              <p>lambodardebtsolution@gmail.com</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-
 
       <div
         className="background-image"
@@ -94,8 +99,8 @@ function Contact() {
               <Form.Control
                 type="text"
                 placeholder="Phone Number"
-                name="phone"
-                value={formData.phone}
+                name="mobile"
+                value={formData.mobile}
                 onChange={handleChange}
                 required
               />
@@ -127,6 +132,20 @@ function Contact() {
           </Form>
         </div>
       </div>
+
+      <Modal show={showPopup} onHide={handlePopupClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Contact Form Status</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>{popupMessage}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handlePopupClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </section>
   );
 }
