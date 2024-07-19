@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button'; 
 import axios from 'axios';
@@ -40,26 +41,29 @@ function Contact() {
 
   return (
     <section>
-      <div className="hero-container">
-        <div className="left-container">
-          <div className="text-container">
-            <h2>Get in touch</h2>
-            <p>Visit our agency or simply send us an email anytime you want. If you have any questions, please feel free to contact us.</p>
-          </div>
+    <div className="container">
+    <div className="left-container">
+      <div className="text-container"> {/* New container for the paragraph */}
+        <h2>Get in touch</h2>
+        <p>Visit our agency or simply send us an email anytime you want. If you have any questions, please feel free to contact us.</p>
+      </div>
+    </div>
+    <div className="right-container">
+      <div className="contact-info">
+        <div className="contact-item">
+          <img src={callImage} alt="Call" />
+          <p>9322944343 / 7058417001
+          </p>
         </div>
-        <div className="right-container">
-          <div className="contact-info">
-            <div className="contact-item">
-              <img src={callImage} alt="Call" />
-              <p>9322944343 / 7058417001</p>
-            </div>
-            <div className="contact-item">
-              <img src={emailImage} alt="Email" />
-              <p>lambodardebtsolution@gmail.com</p>
-            </div>
-          </div>
+        <div className="contact-item">
+          <img src={emailImage} alt="Email" />
+          <p>lambodardebtsolution@gmail.com</p>
         </div>
       </div>
+    </div>
+  </div>
+
+
 
       <div
         className="background-image"
