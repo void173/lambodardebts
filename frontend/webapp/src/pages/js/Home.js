@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import IndividualIntervalsExample from '../../components/js/Carousel';
 import woman from '../../assets/homepagewoman.png';
 import loc from '../../assets/loc.png';
@@ -6,14 +6,34 @@ import { Container, Row, Col } from 'react-bootstrap';
 import '../css/home.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import ReactCardSlider from 'react-card-slider-component';
+import img1 from "../../assets/slide1.png";
+import img2 from "../../assets/slide2.png";
+import img3 from "../../assets/slide3.png";
+import img4 from "../../assets/slide4.png";
+import img5 from "../../assets/slide5.png";
+import img6 from "../../assets/slide6.png";
+
+const sliderClick = (event) => {
+};
+
+const slides = [
+  { image: img1, title: "NPA LOAN RECOVERY", description: "", clickEvent: sliderClick, style: { width: '100%', height: 'auto' } },
+  { image: img2, title: "PERSONAL LOAN RECOVERY", description: "", clickEvent: sliderClick, style: { width: '100%', height: 'auto' } },
+  { image: img3, title: "B2B LOAN RECOVERY", description: "", clickEvent: sliderClick, style: { width: '100%', height: 'auto' } },
+  { image: img4, title: "CREDIT CARD LOAN RECOVERY", description: "", clickEvent: sliderClick, style: { width: '100%', height: 'auto' } },
+  { image: img5, title: "REPOSSION RECOVERY", description: "", clickEvent: sliderClick, style: { width: '100%', height: 'auto' } },
+  { image: img6, title: "HOME LOAN RECOVERY", description: "", clickEvent: sliderClick, style: { width: '100%', height: 'auto' } }
+];
+
+
 export default function Home() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Global duration for all animations
-      once: false, // Whether animation should happen only once - while scrolling down
-      mirror: false, // Whether elements should animate out while scrolling past them
+      duration: 1000,
+      once: false,
+      mirror: false,
     });
   }, []);
 
@@ -69,7 +89,7 @@ export default function Home() {
     <>
       <div className='home-main-custom'>
         <Container>
-          <div className='home-hero-custom' style={containerStyle}  data-aos="fade-up" data-aos-easing="cubic-bezier(0.68, -0.55, 0.27, 1.55)">
+          <div className='home-hero-custom' style={containerStyle} data-aos="fade-up" data-aos-easing="cubic-bezier(0.68, -0.55, 0.27, 1.55)">
             <img style={imageStyle} src={woman} alt='woman' className="img-fluid" />
             <div style={overlayStyle}>
               <div style={overlayContent} className='home-hero-overlay'>
@@ -83,7 +103,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-
+          <br />
+          <br />
+          <h2 className='text-center' data-aos="fade-right" data-aos-once="true">Services Provided</h2>
+          <br />
+          <div style={{display:"flex",justifyContent:"center"}} data-aos="fade-up" data-aos-once="true">
+            <br />
+            <ReactCardSlider slides={slides} />
+          </div>
           <br />
           <br />
           <div className='home-carousel-custom'>
@@ -93,7 +120,6 @@ export default function Home() {
           <br />
           <br />
           <br />
-
           <div className='headoffice-custom'>
             <h3 className='text-center'>Head office</h3>
             <br />
@@ -102,7 +128,7 @@ export default function Home() {
                 <Col md={6} className='head-office-content' data-aos='fade-right'>
                   <div>
                     <h4>Address</h4>
-                    <br/>
+                    <br />
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium commodi</p>
                   </div>
                   <div>
@@ -113,7 +139,7 @@ export default function Home() {
                     <p>Email : Lambodar@debts</p>
                   </div>
                 </Col>
-                <Col md={6} className='head-office-loc' data-aos='fade-left'>
+                <Col md={6} className='head-office-loc' data-aos='fade-right'>
                   <img src={loc} alt='' className='img-fluid' />
                 </Col>
               </Row>

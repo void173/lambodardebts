@@ -7,10 +7,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import axios from 'axios'; // Import axios
+import { Container } from 'react-bootstrap';
 
-const abstyle = {
-  textAlign: 'center'
-};
 
 const jobRoles = ['Back Office Operation', 'Telecalling', 'Field Executive', 'Analyst', 'Administrator'];
 
@@ -70,8 +68,9 @@ const StyledDiv = () => {
   const handlePopupClose = () => setShowPopup(false);
 
   return (
+    <Container>
     <section>
-      <h3 style={abstyle}>Career</h3>
+      <h3 className="text-center">Career</h3>
       <div className="styled-div">
         <h2 data-aos="fade-right">Welcome to Lambodar Debt Solutions!</h2>
         <h4 data-aos="fade-right">We are hiring!</h4>
@@ -157,6 +156,7 @@ const StyledDiv = () => {
         </Modal.Footer>
       </Modal>
     </section>
+    </Container>
   );
 };
 
