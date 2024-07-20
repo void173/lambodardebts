@@ -6,9 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 // Import your Card component here
 import '../css/services.css'
-const abstyle = {
-  textAlign: 'center'
-};
+
 
 const Services = () => {
   useEffect(() => {
@@ -21,8 +19,7 @@ const Services = () => {
   return (
     <Container>
     <section>
-      <h3 id='page-heading' style={abstyle}>Services</h3>
-      
+      <h3 id='page-heading' className="text-center">Services</h3>
       <div className='first-section'>
         <div className='first-section-left'>
           <h4 data-aos="fade-right" data-aos-once="true">Affordable services provided by us.</h4>
@@ -35,7 +32,7 @@ const Services = () => {
         
       </div>
 
-      <div className='second-section-carrier-page'>
+      <div className='second-section-carrier-page' data-aos="fade-down" data-aos-once="true">
         <h3>Services for us</h3>
         <div className='info-para-carrier'>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.</p>
@@ -45,15 +42,15 @@ const Services = () => {
       {/* Cards Section */}
       <Container>
       <div className="cards-container">
-        <div className="cards-row">
+        <div className="cards-row" data-aos="fade-up" data-aos-once="true">
           <Cards />
           <Cards />
         </div>
-        <div className="cards-row">
+        <div className="cards-row" data-aos="fade-up" data-aos-once="true">
           <Cards />
           <Cards />
         </div>
-        <div className="cards-row">
+        <div className="cards-row" data-aos="fade-up" data-aos-once="true">
           <Cards />
           <Cards />
         </div>
