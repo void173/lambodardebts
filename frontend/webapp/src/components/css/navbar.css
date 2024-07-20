@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-between;
     height: 96px;
+    z-index: 1;
   }
   
   .navbar-custom .navbar-brand img {
@@ -28,8 +29,23 @@
   .navbar-custom .navbar-collapse {
     display: flex;
     justify-content: flex-end;
-    font-size: 27px;
+    font-size: 25px;
   }
   .navbar-custom .navbar-toggler-icon {
     background-color: white; /* Change background color of the toggler icon */
+  }
+
+  @media (max-width: 784px) {
+    .navbar-nav{
+      font-size: 15px;
+      background-color: rgba(22, 30, 46, 0.5);
+      border-bottom-left-radius: 20px;
+    }
+    .navbar-collapse{
+      padding-top: 10px;
+    }
+
+    .navbar-toggler:focus{
+      border: none;
+    }
   }
